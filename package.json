@@ -1,0 +1,48 @@
+{
+  "name": "pics-slider-library",
+  "version": "1.0.0",
+  "description": "library to handle video and pictures compression",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"No tests for now\" && exit 0",
+    "clean": "rimraf dist",
+    "build": "npm run clean && tsup",
+    "prepublishOnly": "npm run build",
+    "dev": "tsup --watch",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gloriaconcepto/pics-slider-library.git"
+  },
+  "keywords": [
+    "video",
+    "compression",
+    "pictures",
+    "sliders"
+  ],
+  "author": "gloriaconcepto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gloriaconcepto/pics-slider-library/issues"
+  },
+  "homepage": "https://github.com/gloriaconcepto/pics-slider-library#readme",
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "eslint": "^9.20.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.5.0",
+    "rimraf": "^6.0.1",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3"
+  }
+}
