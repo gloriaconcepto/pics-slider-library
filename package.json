@@ -1,6 +1,6 @@
 {
   "name": "pics-slider-library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "library to handle video and pictures compression",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -11,7 +11,9 @@
     "build": "npm run clean && tsup",
     "prepublishOnly": "npm run build",
     "dev": "tsup --watch",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "repository": {
     "type": "git",
@@ -29,20 +31,36 @@
     "url": "https://github.com/gloriaconcepto/pics-slider-library/issues"
   },
   "homepage": "https://github.com/gloriaconcepto/pics-slider-library#readme",
-  "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.4",
     "@commitlint/cli": "^19.7.1",
     "@commitlint/config-conventional": "^19.7.1",
+    "@storybook/addon-essentials": "^8.5.8",
+    "@storybook/addon-interactions": "^8.5.8",
+    "@storybook/addon-onboarding": "^8.5.8",
+    "@storybook/addon-webpack5-compiler-swc": "^2.1.0",
+    "@storybook/blocks": "^8.5.8",
+    "@storybook/react": "^8.5.8",
+    "@storybook/react-webpack5": "^8.5.8",
+    "@storybook/test": "^8.5.8",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "eslint": "^9.20.0",
+    "eslint-plugin-storybook": "^0.11.3",
     "husky": "^9.1.7",
     "prettier": "^3.5.0",
     "rimraf": "^6.0.1",
+    "storybook": "^8.5.8",
     "tsup": "^8.3.6",
     "typescript": "^5.7.3"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   }
 }
